@@ -1,0 +1,124 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+.text_convert_container {
+  max-width: 860px;
+  margin: 0px auto;
+  padding: 20px;
+}
+.textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.btn_wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.btn2 {
+  background-color: #241124;
+  margin: 5px 0 0 0;
+}
+.output {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  white-space: pre-line;
+  overflow-y: scroll;
+}
+.radio_btns {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+.radio_btn_group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.radio_btns label {
+  padding: 0 10px 0 2px;
+}
+
+.radio_info_wrap {
+  padding: 0 0 10px;
+}
+.radio_info {
+  font-size: 12px;
+  padding: 6px 12px;
+  background-color: #b8e7ba59;
+  border-radius: 30px;
+  display: inline-block;
+  color: #888;
+}
+.info_icon {
+  display: inline-block;
+  border: 2px solid rgb(154, 154, 154);
+  color: rgb(154, 154, 154);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.notice {
+  font-size: 12px;
+  line-height: 22px;
+  padding-top: 10px;
+}
+
+.jh {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.mail {
+  display: none;
+  width: 120px;
+  background-color: #241124;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  bottom: -175%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  letter-spacing: 0;
+}
+
+.mail::after {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* Arrow at the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.jh:hover .mail {
+  display: block;
+}

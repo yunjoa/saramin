@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- 페북 -->
+<meta property="og:title" content="텍스트 변환" />
+<meta
+      property="og:url"
+      content="https://yunjoa.github.io/saramin_text_converter/index.html"
+    />
+<meta property="og:image" content="meta_text_converter.png" />
+<meta
+      property="og:description"
+      content="업무시간을 줄여주는 효율적인 텍스트 변환."
+    />
+
+<!-- 트위터 -->
+<meta name="twitter:card" content="green_heart_image" />
+<meta name="twitter:title" content="텍스트 변환" />
+<meta
+      name="twitter:url"
+      content="https://yunjoa.github.io/saramin_text_converter/index.html"
+    />
+<meta name="twitter:image" content="meta_text_converter.png" />
+<meta
+      name="twitter:description"
+      content="업무시간을 줄여주는 효율적인 텍스트 변환."
+    />
+<link rel="icon" type="image/x-icon" href="text_converter.ico" />
+<link rel="stylesheet" href="style.css" />
+<title>텍스트 변환</title>
+</head>
+<body>
+<div class="text_convert_container"> 
+  <!-- 라디오 버튼 -->
+  <div class="radio_btns">
+    <div class="radio_btn_group">
+      <input
+            type="radio"
+            id="oddEvenLines"
+            name="conversionType"
+            value="oddEven"
+            data-description="홀수 줄은 'ㆍ' 말머리 추가, 짝수 줄은 ' : ' 추가해서 홀수 줄과 연결"
+            checked
+          />
+      <label for="oddEvenLines">복리후생</label>
+    </div>
+    <div class="radio_btn_group">
+      <input
+            type="radio"
+            id="prependBullet"
+            name="conversionType"
+            value="prependBullet"
+            data-description="연속 br 제거, 문장 앞에 'ㆍ' 말머리 추가, 문단 앞 뒤 따옴표 제거"
+          />
+      <label for="prependBullet">말머리 기호 추가</label>
+    </div>
+    <div class="radio_btn_group">
+      <input
+            type="radio"
+            id="removeEmptyLines"
+            name="conversionType"
+            value="removeEmptyLines"
+            data-description="연속 br 태그 제거, 문단 앞 뒤 따옴표 제거"
+          />
+      <label for="removeEmptyLines">연속 줄바꿈 제거</label>
+    </div>
+    <div class="radio_btn_group">
+      <input
+            type="radio"
+            id="removeNumberedLines"
+            name="conversionType"
+            value="removeNumberedLines"
+            data-description="연속 br 제거, 문장 앞의 '1. 2. 3.…', '1) 2) 3)…', '①, ②, ③…'과 같은 넘버링을 제거하고 'ㆍ'말머리로 변경, 문단 앞 뒤 따옴표 제거"
+          />
+      <label for="removeNumberedLines">넘버링 제거</label>
+    </div>
+    <div class="radio_btn_group">
+      <input
+    type="radio"
+    id="td_style_copy"
+    name="conversionType"
+    value="td_style_copy"
+    data-description="첫 td의 스타일을 아래 행의 td에게 일괄 적용"
+  />
+      <label for="td_style_copy">td스타일</label>
+    </div>
+  </div>
+  <!-- 버튼 기능 설명 -->
+  <div class="radio_info_wrap">
+    <p class="radio_info"> <span class="info_icon">i</span>&nbsp;<span id="descriptionContainer"
+            >홀수 줄은 'ㆍ' 말머리 추가, 짝수 줄은 ' : ' 추가해서 홀수 줄과
+      연결</span
+          > </p>
+  </div>
+  <!-- 텍스트 입력  -->
+  <textarea
+        id="inputText"
+        class="textarea"
+        placeholder="텍스트 레쯔기릿"
+      ></textarea>
+  <div class="btn_wrap">
+    <button class="btn" onclick="convertText()">컨버트</button>
+  </div>
+  <!-- 텍스트 출력 -->
+  <div class="output" id="outputText"></div>
+  <div class="btn_wrap">
+    <button class="btn btn2" onclick="copyText()">텍스트 복사</button>
+  </div>
+  <!-- 독소조항 -->
+  <div class="notice"> ※ 텍스트 복사 버튼으로 복사한 것은 메모장에 복붙하지 않아도 됩니다. <br />
+    ※ 추가 문의사항이나 더 편리한 아이디어가 떠오르면 <span class="jh"
+          >지와
+    <div class="mail">p0333@naver.com</div>
+    </span
+        >씨에게 🙂 </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
