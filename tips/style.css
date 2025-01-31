@@ -1,0 +1,319 @@
+@charset "utf-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  /* vertical-align: baseline; */
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  font-family: 맑은고딕;
+  font-size: 14px;
+  color: #111;
+  display: inline-block;
+  pointer-events: none;
+}
+.btn {
+  border: 1px solid black;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-top: 10px;
+  pointer-events: auto;
+}
+.btn:hover {
+  background-color: #111;
+  color: #fff;
+}
+.togo_wrap {
+  width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  word-break: keep-all;
+  flex-wrap: nowrap;
+  padding: 40px 0;
+}
+.quickmenu {
+  position: fixed;
+  right: 20%;
+  bottom: 30px;
+  padding: 10px 20px;
+  border: 0;
+  display: inline-block;
+  border-radius: 20px;
+  background: #e8f4ff;
+  pointer-events: auto;
+}
+
+.quickmenu:hover {
+  background-color: #3762d1;
+  color: #ffffff;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: -1px;
+  font-size: 25px;
+  padding: 60px 0 20px;
+}
+
+section {
+  background-color: #eff5ff;
+  width: 100%;
+}
+container_wrap {
+  width: 860px;
+  margin: 0 auto;
+  position: relative;
+}
+.container {
+  width: 860px;
+  padding: 40px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.container:hover {
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.container2 {
+  padding: 20px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  display: inline-block;
+}
+
+.container2:hover {
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.center_wrap {
+  width: 940px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 30px 0;
+  width: 100%;
+  min-width: 860px;
+  height: 150px;
+  border: solid #d7dce5;
+  border-width: 1px 0;
+  background: #f8fafc;
+}
+p {
+  width: 860px;
+
+  margin: 0 auto;
+
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: -1px;
+}
+.hr1 {
+  width: 940px;
+  border: 0;
+  border-top: 1px dashed #8c8c8c;
+  border-bottom: 1px dashed #fff;
+}
+.icon_wrap {
+  width: 860px;
+  margin: 0 auto;
+  background-color: #f8fafc;
+  line-height: 22px;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.mobileNotice_wrap {
+  background-color: balck;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: none;
+  background-color: black;
+}
+.mobileNotice {
+  line-height: 1.8;
+  width: 50%;
+  height: 40vh;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 80px;
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .mobileNotice_wrap {
+    display: block;
+  }
+  body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  .quickmenu {
+    display: none;
+  }
+}
+
+.code_box {
+  width: 860px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #111;
+  color: #fff;
+  padding: 5px;
+  line-height: 25px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  font-family: Hack;
+}
+
+.description {
+  font-size: 15px;
+  color: #444;
+}
