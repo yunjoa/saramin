@@ -7,13 +7,13 @@ function convertText() {
   ).value;
 
   var output = "";
-  
+
   // 빈 줄 제거 함수
   function removeEmptyLines(text) {
     return text.replace(/^"|"\s*$/gm, "")
-               .split("\n")
-               .filter(line => line.trim() !== "")
-               .join("\n");
+      .split("\n")
+      .filter(line => line.trim() !== "")
+      .join("\n");
   }
 
   if (conversionType === "oddEven") {
@@ -33,10 +33,11 @@ function convertText() {
     input = removeEmptyLines(input);
     var lines = input.split("\n");
     for (var i = 0; i < lines.length; i++) {
-      lines[i] = lines[i].replace(/^"\s*|\s*"$/g, "");
-      lines[i] = lines[i].replace(/^\s*\d+\)?\.\s*/g, "ㆍ");
-      lines[i] = lines[i].replace(/^[①②③④⑤⑥⑦⑧⑨⑩]+/g, "ㆍ");
+      lines[i] = lines[i].replace(/^"\s*|\s*"$/g, ""); // 양쪽 따옴표 제거
+      lines[i] = lines[i].replace(/^\s*\d+[\)\.]\s*/g, "ㆍ"); // 1), 2), 3) 같은 번호 변환
+      lines[i] = lines[i].replace(/^[①②③④⑤⑥⑦⑧⑨⑩]+/g, "ㆍ"); // 원형 숫자 변환
       output += lines[i] + "\n";
+
     }
   } else if (conversionType === "td_style_copy") {
     var table = document.createElement('table');
@@ -58,7 +59,7 @@ function convertText() {
         cell.removeAttribute("style");
         cell.removeAttribute("align");
         cell.removeAttribute("bgcolor");
-        
+
         if (columnStyles[colIndex].style) {
           cell.setAttribute("style", columnStyles[colIndex].style);
         }
