@@ -96,3 +96,38 @@ document.querySelectorAll('input[name="conversionType"]').forEach((radio) => {
     document.getElementById("descriptionContainer").innerText = description;
   });
 });
+
+
+
+document.addEventListener("keydown", function (e) {
+  // Alt + 숫자키 => 라디오 버튼 선택 + 텍스트창 포커스
+  if (e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+    const key = e.key;
+    const isNumber = /^[1-9]$/.test(key);
+
+    if (isNumber) {
+      const index = parseInt(key) - 1;
+      const radios = document.querySelectorAll('input[name="conversionType"]');
+      const inputField = document.getElementById("inputText");
+
+      if (radios[index]) {
+        radios[index].checked = true;
+        radios[index].dispatchEvent(new Event("change"));
+
+        // 텍스트창 포커스
+        setTimeout(() => {
+          if (inputField) inputField.focus();
+        }, 50); // 약간의 지연을 줘서 이벤트 충돌 방지
+      }
+
+      e.preventDefault();
+    }
+  }
+
+  // Ctrl + Enter => convert + copy
+  if (e.key === "Enter" && e.ctrlKey) {
+    e.preventDefault();
+    convertText();
+    setTimeout(copyText, 100);
+  }
+});
